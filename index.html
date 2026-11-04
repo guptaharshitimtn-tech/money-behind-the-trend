@@ -325,16 +325,16 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
         <p class="lab">Every issue <b>so far</b></p>
         <h2>The archive.<span>One trend, one money trail.</span></h2>
       </div>
-      <p class="meta">Newest first<br>6 issues</p>
+      <p class="meta">Newest first<br>7 issues</p>
     </div>
     <div class="bento">
-      <article class="t issue wide s8 hov" id="silver">
-        <div class="cov sk"><picture><source type="image/avif" srcset="img/cov-silver.avif"><img src="img/cov-silver.webp" alt="Cover of the silver issue" width="300" height="375" loading="lazy" decoding="async"></picture></div>
+      <article class="t issue wide s8 hov" id="twoam">
+        <div class="cov sk"><picture><source type="image/avif" srcset="img/cov-twoam.avif"><img src="img/cov-twoam.webp" alt="Cover of the 2am issue: who'd pick up at 2am, a network of messages with one yellow listener" width="300" height="375" loading="lazy" decoding="async"></picture></div>
         <div class="body">
-          <span class="tag"><b>Reader favourite</b> · 26 Oct 2026 · Markets</span>
-          <h3>Funds sold the top.<span>India bought it.</span></h3>
-          <p>"Silver price today" hit 500K+ searches. The part nobody searched for: who bought what the big funds sold.</p>
-          <div class="acts"><button type="button" data-open="dlg-silver">See 6 slides</button><a href="https://lnkd.in/p/gssg2b88" target="_blank" rel="noopener">On LinkedIn ↗</a></div>
+          <span class="tag"><b>Latest</b> · 3 Nov 2026 · AI and attention</span>
+          <h3>Who'd pick up at 2am?<span>Someone's paying for it.</span></h3>
+          <p>The AI friend that is always there just filed for bankruptcy. Every 2am chat is a compute bill, and the most attached users cost the most.</p>
+          <div class="acts"><button type="button" data-open="dlg-twoam">See 7 slides</button><a href="https://www.linkedin.com/in/harshit-gupta-b852a015a/recent-activity/all/" target="_blank" rel="noopener">On LinkedIn ↗</a></div>
         </div>
       </article>
       <div class="t yel sub s4">
@@ -364,7 +364,15 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
           <div class="acts"><button type="button" data-open="dlg-reels">See 7 slides</button><a href="https://lnkd.in/p/g9Yhfm5G" target="_blank" rel="noopener">On LinkedIn ↗</a></div>
         </div>
       </article>
-      <div class="s4" style="display:grid;gap:var(--gap);grid-template-rows:1fr 1fr">
+      <div class="s4" style="display:grid;gap:var(--gap);grid-template-rows:repeat(3,1fr)">
+        <article class="t issue mini hov" id="silver">
+          <div class="cov sk"><picture><source type="image/avif" srcset="img/cov-silver.avif"><img src="img/cov-silver.webp" alt="Cover of the silver issue" width="300" height="375" loading="lazy" decoding="async"></picture></div>
+          <div class="body">
+            <span class="tag"><b>Reader favourite</b> · 26 Oct 2026 · Markets</span>
+            <h3>Funds sold the top.<span>India bought it.</span></h3>
+            <div class="acts"><button type="button" data-open="dlg-silver">See 6 slides</button><a href="https://lnkd.in/p/gssg2b88" target="_blank" rel="noopener">On LinkedIn ↗</a></div>
+          </div>
+        </article>
         <article class="t issue mini hov" id="recaptcha">
           <div class="cov sk"><picture><source type="image/avif" srcset="img/cov-recaptcha.avif"><img src="img/cov-recaptcha.webp" alt="Unpaid since 2007: reCAPTCHA, Pokémon Go and LinkedIn as three unpaid employers" width="300" height="375" loading="lazy" decoding="async"></picture></div>
           <div class="body">
@@ -446,6 +454,22 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
     <p class="sig"><b>Harshit Gupta</b>The money behind the trend</p>
   </footer>
 </div>
+
+<dialog id="dlg-twoam" aria-labelledby="dlg-twoam-h">
+  <div class="dlg-h"><h3 id="dlg-twoam-h">Who'd pick up at 2am? Someone's paying for it.</h3><button type="button" data-close>Close</button></div>
+  <div class="dlg-b">
+    <ul class="slides" aria-label="2am carousel, seven slides">
+      <li class="sk"><picture><source type="image/avif" data-srcset="img/twoam-1.avif"><img data-src="img/twoam-1.webp" alt="Slide 1: Who'd pick up at 2am? Each line is a message, each dot is a person, one yellow listener." width="540" height="675" decoding="async"></picture></li>
+      <li class="sk"><picture><source type="image/avif" data-srcset="img/twoam-2.avif"><img data-src="img/twoam-2.webp" alt="Slide 2: Character.AI filed for Chapter 11. Valued at $1B in 2023, opening bid $20M in 2026." width="540" height="675" decoding="async"></picture></li>
+      <li class="sk"><picture><source type="image/avif" data-srcset="img/twoam-3.avif"><img data-src="img/twoam-3.webp" alt="Slide 3: Every 2am chat is a compute bill. Running costs $13.3M against revenue of $5.3M in Aug 2026." width="540" height="675" decoding="async"></picture></li>
+      <li class="sk"><picture><source type="image/avif" data-srcset="img/twoam-4.avif"><img data-src="img/twoam-4.webp" alt="Slide 4: 602M downloads, $48M in revenue, about 8 cents per install." width="540" height="675" decoding="async"></picture></li>
+      <li class="sk"><picture><source type="image/avif" data-srcset="img/twoam-5.avif"><img data-src="img/twoam-5.webp" alt="Slide 5: Free to talk, someone's paying. Cloud gets paid, investors written off, free users and friends not called." width="540" height="675" decoding="async"></picture></li>
+      <li class="sk"><picture><source type="image/avif" data-srcset="img/twoam-6.avif"><img data-src="img/twoam-6.webp" alt="Slide 6: It helps tonight, it costs you later. Lonely, then more chatbot, then more isolated." width="540" height="675" decoding="async"></picture></li>
+      <li class="sk"><picture><source type="image/avif" data-srcset="img/twoam-7.avif"><img data-src="img/twoam-7.webp" alt="Slide 7: It will never need you. That's the whole business. Message one person for no reason this week." width="540" height="675" decoding="async"></picture></li>
+    </ul>
+    <a class="go" href="https://www.linkedin.com/in/harshit-gupta-b852a015a/recent-activity/all/" target="_blank" rel="noopener">Read the post on LinkedIn ↗</a>
+  </div>
+</dialog>
 
 <dialog id="dlg-silver" aria-labelledby="dlg-silver-h">
   <div class="dlg-h"><h3 id="dlg-silver-h">Funds sold the top. India bought it.</h3><button type="button" data-close>Close</button></div>
