@@ -126,6 +126,18 @@ h1 span{display:block;color:var(--ink2)}
 .twist{margin:18px 0 0;padding-top:16px;border-top:1px solid #333;font-weight:800;font-size:19px;line-height:1.2}
 .twist span{display:block;color:var(--accent)}
 
+/* reels */
+.reelrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--gap);margin-bottom:var(--gap)}
+.reel{display:flex;flex-direction:column;gap:12px;padding:12px 12px 18px}
+.reel video{width:100%;aspect-ratio:9/16;height:auto;border-radius:12px;background:#000;display:block}
+.reel h3{font-weight:800;font-size:17px;letter-spacing:-.015em;line-height:1.15;margin:0;padding:0 6px}
+.reel h3 span{display:block;color:var(--ink2)}
+.reel .tag{padding:0 6px}
+.reel .acts{margin-top:auto;padding:0 6px}
+.reel .acts a{font:700 14px/1 var(--sans);color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
+.reel .acts a:hover{text-decoration-color:var(--accent)}
+@media (max-width:1020px){.reelrow{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:230px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.reel{scroll-snap-align:start}}
+
 /* issue tiles */
 .issue{display:flex;flex-direction:column;gap:14px;padding:0}
 .issue .cov{aspect-ratio:4/5;overflow:hidden;border-bottom:2px solid var(--ink);background:var(--panel)}
@@ -232,7 +244,7 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
 <div class="wrap">
   <header class="bar">
     <p class="lab">The money behind <b>the trend</b></p>
-    <a class="btn line" href="https://www.linkedin.com/in/harshit-gupta-b852a015a" target="_blank" rel="noopener">Follow on LinkedIn ↗</a>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn line" href="https://www.instagram.com/money_behind_the_trend/" target="_blank" rel="noopener">Instagram ↗</a><a class="btn line" href="https://www.linkedin.com/in/harshit-gupta-b852a015a" target="_blank" rel="noopener">Follow on LinkedIn ↗</a></div>
   </header>
 
   <main>
@@ -246,7 +258,7 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
         <p class="lede">Every week, one mass India trend and the <b>deal, insurance or market mechanic</b> underneath it. Second-day, short, and every number sourced.</p>
         <div class="ctas">
           <a class="btn solid" href="https://www.linkedin.com/in/harshit-gupta-b852a015a" target="_blank" rel="noopener">Follow on LinkedIn</a>
-          <a class="btn line" href="https://www.linkedin.com/pulse/money-behind-trend-newsletter-issue-1-five-trends-one-harshit-gupta-u0qac/" target="_blank" rel="noopener">Subscribe to the newsletter ↗</a>
+          <a class="btn line" href="https://www.linkedin.com/pulse/money-behind-trend-newsletter-issue-2-ramayana-invoice-harshit-gupta-v2tvc/" target="_blank" rel="noopener">Subscribe to the newsletter ↗</a>
           <a class="btn line" href="#this-week">This week ↓</a>
         </div>
       </div>
@@ -335,7 +347,7 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
           <span class="tag"><b>Latest</b> · 9 Nov 2026 · Film and markets</span>
           <h3>Ramayana was an invoice<span>before it was a gamble.</span></h3>
           <p>Same opening as Adipurush. But the VFX studio belongs to the producer's own listed company, so part of the ₹4,000 crore came back before the first show.</p>
-          <div class="acts"><button type="button" data-open="dlg-invoice">See all 6 slides</button><a href="https://www.linkedin.com/in/harshit-gupta-b852a015a/recent-activity/all/" target="_blank" rel="noopener">On LinkedIn ↗</a></div>
+          <div class="acts"><button type="button" data-open="dlg-invoice">See all 6 slides</button><a href="https://lnkd.in/p/gDqjenZy" target="_blank" rel="noopener">On LinkedIn ↗</a><a href="https://www.linkedin.com/pulse/money-behind-trend-newsletter-issue-2-ramayana-invoice-harshit-gupta-v2tvc/" target="_blank" rel="noopener">Newsletter issue 2 ↗</a></div>
         </div>
       </article>
       <div class="t yel sub s4">
@@ -344,7 +356,7 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
           <h3>One trend.<br>One money trail.<br>Every week.</h3>
         </div>
         <p>The newsletter carries each issue with the sources in full. Free, and short enough to finish.</p>
-        <a class="btn solid" href="https://www.linkedin.com/pulse/money-behind-trend-newsletter-issue-1-five-trends-one-harshit-gupta-u0qac/" target="_blank" rel="noopener">Subscribe ↗</a>
+        <a class="btn solid" href="https://www.linkedin.com/pulse/money-behind-trend-newsletter-issue-2-ramayana-invoice-harshit-gupta-v2tvc/" target="_blank" rel="noopener">Subscribe ↗</a>
       </div>
 
       <article class="t issue s4 m3 hov" id="twoam">
@@ -389,7 +401,7 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
           <h3>Delhi's sites are shut.<br>Who pays<br>the workers?</h3>
         </div>
         <p>Builders pay a 1% cess for workers. Where most of it sits is in issue 2, not on my feed.</p>
-        <a class="btn solid" href="https://www.linkedin.com/pulse/money-behind-trend-newsletter-issue-1-five-trends-one-harshit-gupta-u0qac/" target="_blank" rel="noopener">Subscribe ↗</a>
+        <a class="btn solid" href="https://www.linkedin.com/pulse/money-behind-trend-newsletter-issue-2-ramayana-invoice-harshit-gupta-v2tvc/" target="_blank" rel="noopener">Subscribe ↗</a>
       </div>
       <div class="s4" style="display:grid;gap:var(--gap);grid-template-rows:repeat(3,1fr)">
         <article class="t issue mini hov" id="silver">
@@ -417,6 +429,47 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
           </div>
         </article>
       </div>
+    </div>
+
+    <!-- REELS -->
+    <div class="sec" id="reels-sec">
+      <div>
+        <p class="lab">Short <b>reels</b></p>
+        <h2>Under a minute.<span>Same money trail.</span></h2>
+      </div>
+      <p class="meta">Newest first<br><a href="https://www.instagram.com/money_behind_the_trend/" target="_blank" rel="noopener" style="color:var(--ink);font-weight:700">@money_behind_the_trend ↗</a></p>
+    </div>
+    <div class="reelrow">
+      <article class="t reel hov" id="reel-gold">
+        <video src="media/reel-gold.mp4" poster="media/reel-gold.webp" controls playsinline preload="none" width="540" height="960" aria-label="Reel: The PM said don't buy gold. Lenders took it very well."></video>
+        <span class="tag"><b>Latest</b> · 12 Nov 2026</span>
+        <h3>The PM said don't buy gold.<span>Lenders took it very well.</span></h3>
+        <div class="acts"><a href="https://www.instagram.com/reel/DfoXY7TpKzB/" target="_blank" rel="noopener">Watch on Instagram ↗</a></div>
+      </article>
+      <article class="t reel hov" id="reel-gta6">
+        <video src="media/reel-gta6.mp4" poster="media/reel-gta6.webp" controls playsinline preload="none" width="540" height="960" aria-label="Reel: GTA 6 isn't out. 4 players already got paid."></video>
+        <span class="tag">11 Nov 2026</span>
+        <h3>GTA 6 isn't out.<span>4 players already got paid.</span></h3>
+        <div class="acts"><a href="https://www.instagram.com/reel/Dfl27LjpzYf/" target="_blank" rel="noopener">Watch on Instagram ↗</a></div>
+      </article>
+      <article class="t reel hov" id="reel-ramayana">
+        <video src="media/reel-ramayana.mp4" poster="media/reel-ramayana.webp" controls playsinline preload="none" width="540" height="960" aria-label="Reel: Ramayana opened exactly like Adipurush."></video>
+        <span class="tag">9 Nov 2026</span>
+        <h3>Ramayana opened<span>exactly like Adipurush.</span></h3>
+        <div class="acts"><a href="https://www.instagram.com/reel/Dfg4rTtpxxN/" target="_blank" rel="noopener">Watch on Instagram ↗</a></div>
+      </article>
+      <article class="t reel hov" id="reel-petrol">
+        <video src="media/reel-petrol.mp4" poster="media/reel-petrol.webp" controls playsinline preload="none" width="540" height="960" aria-label="Reel: Crude fell 16%. Our petrol fell ₹0."></video>
+        <span class="tag">6 Nov 2026</span>
+        <h3>Crude fell 16%.<span>Our petrol fell ₹0.</span></h3>
+        <div class="acts"><a href="https://www.instagram.com/reel/DfY9yhqJPZb/" target="_blank" rel="noopener">Watch on Instagram ↗</a></div>
+      </article>
+      <article class="t reel hov" id="reel-twoam">
+        <video src="media/reel-twoam.mp4" poster="media/reel-twoam.webp" controls playsinline preload="none" width="540" height="960" aria-label="Reel: Who'd pick up at 2am? Someone's paying for it."></video>
+        <span class="tag">4 Nov 2026</span>
+        <h3>Who'd pick up at 2am?<span>Someone's paying for it.</span></h3>
+        <div class="acts"><a href="https://www.instagram.com/reel/DfSjqPLzyFG/" target="_blank" rel="noopener">Watch on Instagram ↗</a></div>
+      </article>
     </div>
 
     <!-- METHOD -->
@@ -470,7 +523,7 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
         <h2>Next week's trend<span>is already loading.</span></h2>
         <div class="ctas">
           <a class="btn yel" href="https://www.linkedin.com/in/harshit-gupta-b852a015a" target="_blank" rel="noopener">Follow on LinkedIn</a>
-          <a class="btn inv" href="https://www.linkedin.com/pulse/money-behind-trend-newsletter-issue-1-five-trends-one-harshit-gupta-u0qac/" target="_blank" rel="noopener">Subscribe to the newsletter ↗</a>
+          <a class="btn inv" href="https://www.linkedin.com/pulse/money-behind-trend-newsletter-issue-2-ramayana-invoice-harshit-gupta-v2tvc/" target="_blank" rel="noopener">Subscribe to the newsletter ↗</a>
         </div>
       </div>
     </div>
@@ -493,7 +546,7 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
       <li class="sk"><picture><source type="image/avif" data-srcset="img/invoice-5.avif"><img data-src="img/invoice-5.webp" alt="Slide 5: At the box office, Ramayana is a gamble. At DNEG, Ramayana was an invoice." width="540" height="675" decoding="async"></picture></li>
       <li class="sk"><picture><source type="image/avif" data-srcset="img/invoice-6.avif"><img data-src="img/invoice-6.webp" alt="Slide 6: Skip Monday's numbers. Read the 13 Nov results." width="540" height="675" decoding="async"></picture></li>
     </ul>
-    <a class="go" href="https://www.linkedin.com/in/harshit-gupta-b852a015a/recent-activity/all/" target="_blank" rel="noopener">Read the post on LinkedIn ↗</a>
+    <a class="go" href="https://lnkd.in/p/gDqjenZy" target="_blank" rel="noopener">Read the post on LinkedIn ↗</a>
   </div>
 </dialog>
 <dialog id="dlg-arnab" aria-labelledby="dlg-arnab-h">
@@ -582,6 +635,7 @@ document.querySelectorAll('dialog').forEach(function(d){
   d.querySelector('[data-close]').addEventListener('click',function(){d.close()});
   d.addEventListener('click',function(e){if(e.target===d)d.close()});
 });
+document.querySelectorAll('video').forEach(function(v){v.addEventListener('play',function(){document.querySelectorAll('video').forEach(function(o){if(o!==v)o.pause()})})});
 </script>
 </body>
 </html>
