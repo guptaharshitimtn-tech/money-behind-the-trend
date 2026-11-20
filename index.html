@@ -6,7 +6,8 @@
 <title>The Money Behind the Trend</title>
 <meta name="description" content="One mass India trend a week and the deal, insurance or market mechanic underneath it. By Harshit Gupta.">
 <link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="img/arnab-1.avif" as="image" type="image/avif" fetchpriority="high">
+<link rel="preload" href="img/wedding-1.avif" as="image" type="image/avif" fetchpriority="high">
+<script>document.documentElement.classList.add('js')</script>
 <style>
 /* Self-hosted, subset fonts: one variable Inter (wght 400-900, opsz 14-32) + JetBrains Mono 400/700. */
 @font-face{font-family:"Inter";src:url(fonts/inter.woff2) format("woff2");font-weight:400 900;font-style:normal;font-display:swap}
@@ -238,13 +239,30 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
   .meta{text-align:left}
   .sec{margin-top:44px}
 }
+/* v2 polish (20 Nov 2026): sticky bar, reveal on scroll, live dot, folds, rupee coin */
+.bar{position:sticky;top:0;z-index:20;background:var(--ground);padding:14px 0;margin-bottom:8px;border-bottom:2px solid transparent;transition:border-color .2s ease}
+.bar.stuck{border-bottom-color:var(--ink)}
+.nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.nav .nl{font:700 14px/1 var(--sans);text-decoration:none;color:var(--ink);text-underline-offset:5px;text-decoration-thickness:2px}
+.nav .nl:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.sec,[id]{scroll-margin-top:84px}
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease;transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.tag b.live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ink);margin-right:6px;vertical-align:1px;animation:live 1.6s ease-in-out infinite}
+@keyframes live{50%{opacity:.25;transform:scale(.6)}}
+.js .fold .old{display:none!important}
+.more{display:flex;justify-content:center;margin:4px 0 8px}
+.coin{position:fixed;left:0;top:0;width:34px;height:34px;pointer-events:none;z-index:60;opacity:0;transition:opacity .25s ease;will-change:transform}
+.coin.on{opacity:1}
+@media (max-width:640px){.nav .nl{display:none}.bar{position:static;padding:10px 0}}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}.tag b.live::before{animation:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="bar">
     <p class="lab">The money behind <b>the trend</b></p>
-    <div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn line" href="https://www.instagram.com/money_behind_the_trend/" target="_blank" rel="noopener">Instagram ↗</a><a class="btn line" href="https://www.linkedin.com/in/harshit-gupta-b852a015a" target="_blank" rel="noopener">Follow on LinkedIn ↗</a></div>
+    <nav class="nav" aria-label="Sections"><a class="nl" href="#this-week">This week</a><a class="nl" href="#issues">Issues</a><a class="nl" href="#reels-sec">Reels</a><span style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn line" href="https://www.instagram.com/money_behind_the_trend/" target="_blank" rel="noopener">Instagram ↗</a><a class="btn line" href="https://www.linkedin.com/in/harshit-gupta-b852a015a" target="_blank" rel="noopener">Follow on LinkedIn ↗</a></span></nav>
   </header>
 
   <main>
@@ -319,7 +337,7 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
 
       <div class="t quotebox s7">
         <p class="quote">"52 lakh weddings. Barely a dozen good dates. So everyone wants the same hall, on the same day. Guess who pays for that."</p>
-        <p class="note">CAIT, the traders' body, expects 52 lakh weddings worth ₹7.5 lakh crore between 21 November and 15 December. By its own numbers, a Delhi-NCR wedding averages about ₹50 lakh and one in the rest of India about ₹11 lakh: 4.7 times. The record season was announced by a traders' body whose secretary general, Praveen Khandelwal, is also the MP for Chandni Chowk. <b>Not advice. Just how I read a record-season press note.</b></p>
+        <p class="note">By CAIT's own numbers, a Delhi-NCR wedding averages about ₹50 lakh, the rest of India about ₹11 lakh. The record season was announced by a traders' body whose secretary general is Chandni Chowk's MP. <b>Not advice.</b></p>
       </div>
       <div class="t stat s3 half hov">
         <p class="lab">Delhi-NCR, ₹ lakh</p>
@@ -341,11 +359,11 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
       </div>
       <p class="meta">Newest first<br>12 issues</p>
     </div>
-    <div class="bento">
+    <div class="bento fold" id="issues-grid">
       <article class="t issue wide s8 hov" id="wedding">
         <div class="cov sk"><picture><source type="image/avif" srcset="img/cov-wedding.avif"><img src="img/cov-wedding.webp" alt="Cover of the wedding season issue: three wedding cards, all dated 21 November" width="300" height="375" loading="lazy" decoding="async"></picture></div>
         <div class="body">
-          <span class="tag"><b>Latest</b> · 20 Nov 2026 · Weddings and spending</span>
+          <span class="tag"><b class="live">Latest</b> · 20 Nov 2026 · Weddings and spending</span>
           <h3>Card unka. Muhurat pandit ka.<span>Bill aapka.</span></h3>
           <p>52 lakh weddings and barely a dozen good dates, so every hall is booked on the same night. CAIT's own numbers put a Delhi-NCR wedding at about ₹50 lakh, 4.7 times the rest of India. The record season was announced by a traders' body whose secretary general is Chandni Chowk's MP.</p>
           <div class="acts"><button type="button" data-open="dlg-wedding">See all 7 slides</button><a href="https://lnkd.in/p/gwUZ_3X2" target="_blank" rel="noopener">On LinkedIn ↗</a></div>
@@ -365,7 +383,6 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
         <div class="body">
           <span class="tag">17 Nov 2026 · Jobs and tech</span>
           <h3>Sign in 3 days.<span>One month muft.</span></h3>
-          <p>Qualcomm's reported exit offer in India, next to its books: $13.6 billion profit, $332 million on layoffs, $7.8 billion on buying back its own shares.</p>
           <div class="acts"><button type="button" data-open="dlg-qualcomm">See all 7 slides</button><a href="https://lnkd.in/p/gG_9fXiA" target="_blank" rel="noopener">On LinkedIn ↗</a></div>
         </div>
       </article>
@@ -374,7 +391,6 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
         <div class="body">
           <span class="tag">16 Nov 2026 · Tech and contracts</span>
           <h3>Price up in July.<span>Outlook down in November.</span></h3>
-          <p>Microsoft's contract pays a coupon for the lost day: half of one month's bill, at most. The office plan went up $36 a year in July.</p>
           <div class="acts"><button type="button" data-open="dlg-outage">See all 7 slides</button><a href="https://lnkd.in/p/gHr2BSJc" target="_blank" rel="noopener">On LinkedIn ↗</a></div>
         </div>
       </article>
@@ -383,7 +399,6 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
         <div class="body">
           <span class="tag">9 Nov 2026 · Film and markets</span>
           <h3>Ramayana was an invoice<span>before it was a gamble.</span></h3>
-          <p>Same opening as Adipurush. But the VFX studio belongs to the producer's own listed company, so part of the ₹4,000 crore came back before the first show.</p>
           <div class="acts"><button type="button" data-open="dlg-invoice">See all 6 slides</button><a href="https://lnkd.in/p/gDqjenZy" target="_blank" rel="noopener">On LinkedIn ↗</a><a href="https://www.linkedin.com/pulse/money-behind-trend-newsletter-issue-2-ramayana-invoice-harshit-gupta-v2tvc/" target="_blank" rel="noopener">Newsletter issue 2 ↗</a></div>
         </div>
       </article>
@@ -393,7 +408,6 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
         <div class="body">
           <span class="tag">3 Nov 2026 · AI and attention</span>
           <h3>Who'd pick up at 2am?<span>Someone's paying for it.</span></h3>
-          <p>The AI friend that is always there just filed for bankruptcy. Every 2am chat is a compute bill, and the most attached users cost the most.</p>
           <div class="acts"><button type="button" data-open="dlg-twoam">See 7 slides</button><a href="https://www.linkedin.com/in/harshit-gupta-b852a015a/recent-activity/all/" target="_blank" rel="noopener">On LinkedIn ↗</a></div>
         </div>
       </article>
@@ -402,7 +416,6 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
         <div class="body">
           <span class="tag">2 Nov 2026 · Weather and insurance</span>
           <h3>The gap follows the premium.<span>Not the risk.</span></h3>
-          <p>Andhra stopped paying farmers' crop premiums and enrolment fell 77%. Then Cyclone Arnab left a ₹4,600 crore bill.</p>
           <div class="acts"><button type="button" data-open="dlg-arnab">See all 6 slides</button><a href="https://lnkd.in/p/gR_B-z6d" target="_blank" rel="noopener">On LinkedIn ↗</a></div>
         </div>
       </article>
@@ -411,28 +424,26 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
         <div class="body">
           <span class="tag">19 Oct 2026 · Sport and insurance</span>
           <h3>The trigger matters<span>more than the rain.</span></h3>
-          <p>Rain ended the India vs West Indies decider in Bengaluru. A "one ball bowled" cover can leave the organiser and the fan holding the bill.</p>
           <div class="acts"><a href="https://lnkd.in/p/gRt_TRcC" target="_blank" rel="noopener">On LinkedIn ↗</a></div>
         </div>
       </article>
-      <article class="t issue s4 m3 hov" id="reels">
+      <article class="t issue s4 m3 hov old" id="reels">
         <div class="cov sk"><picture><source type="image/avif" srcset="img/cov-reels.avif"><img src="img/cov-reels.webp" alt="Cover of the Reels feed issue" width="300" height="375" loading="lazy" decoding="async"></picture></div>
         <div class="body">
           <span class="tag">13 Oct 2026 · Tech and social</span>
           <h3>Instagram doesn't know what you did last night.<span>It knows where your thumb stopped.</span></h3>
-          <p>How the Reels feed picks your next video, and why India's hours sell at a bulk rate.</p>
           <div class="acts"><button type="button" data-open="dlg-reels">See 7 slides</button><a href="https://lnkd.in/p/g9Yhfm5G" target="_blank" rel="noopener">On LinkedIn ↗</a></div>
         </div>
       </article>
-      <div class="t sub s4">
+      <div class="t sub s4 old">
         <div>
           <p class="lab">Only in <b>the newsletter</b></p>
-          <h3>Delhi's sites are shut.<br>Who pays<br>the workers?</h3>
+          <h3>Sources in full.<br>One extra story.<br>Every issue.</h3>
         </div>
-        <p>Builders pay a 1% cess for workers. Where most of it sits is in issue 2, not on my feed.</p>
+        <p>The newsletter carries what doesn't fit in a carousel.</p>
         <a class="btn solid" href="https://www.linkedin.com/pulse/money-behind-trend-newsletter-issue-2-ramayana-invoice-harshit-gupta-v2tvc/" target="_blank" rel="noopener">Subscribe ↗</a>
       </div>
-      <div class="s4" style="display:grid;gap:var(--gap);grid-template-rows:repeat(3,1fr)">
+      <div class="s4 old" style="display:grid;gap:var(--gap);grid-template-rows:repeat(3,1fr)">
         <article class="t issue mini hov" id="silver">
           <div class="cov sk"><picture><source type="image/avif" srcset="img/cov-silver.avif"><img src="img/cov-silver.webp" alt="Cover of the silver issue" width="300" height="375" loading="lazy" decoding="async"></picture></div>
           <div class="body">
@@ -460,6 +471,8 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
       </div>
     </div>
 
+    <div class="more"><button type="button" class="btn line" data-unfold="issues-grid">Show 4 older issues</button></div>
+
     <!-- REELS -->
     <div class="sec" id="reels-sec">
       <div>
@@ -468,10 +481,10 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
       </div>
       <p class="meta">Newest first<br><a href="https://www.instagram.com/money_behind_the_trend/" target="_blank" rel="noopener" style="color:var(--ink);font-weight:700">@money_behind_the_trend ↗</a></p>
     </div>
-    <div class="reelrow">
+    <div class="reelrow fold" id="reels-grid">
       <article class="t reel hov" id="reel-wedding">
         <video src="media/reel-wedding.mp4" poster="media/reel-wedding.webp" controls playsinline preload="none" width="540" height="960" aria-label="Reel: 3 cards. 1 date. Bill kiska?"></video>
-        <span class="tag"><b>Latest</b> · 20 Nov 2026</span>
+        <span class="tag"><b class="live">Latest</b> · 20 Nov 2026</span>
         <h3>3 cards. 1 date.<span>Bill kiska?</span></h3>
         <div class="acts"><a href="https://www.instagram.com/money_behind_the_trend/" target="_blank" rel="noopener">On Instagram ↗</a></div>
       </article>
@@ -499,31 +512,33 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
         <h3>The PM said don't buy gold.<span>Lenders took it very well.</span></h3>
         <div class="acts"><a href="https://www.instagram.com/reel/DfoXY7TpKzB/" target="_blank" rel="noopener">Watch on Instagram ↗</a></div>
       </article>
-      <article class="t reel hov" id="reel-gta6">
+      <article class="t reel hov old" id="reel-gta6">
         <video src="media/reel-gta6.mp4" poster="media/reel-gta6.webp" controls playsinline preload="none" width="540" height="960" aria-label="Reel: GTA 6 isn't out. 4 players already got paid."></video>
         <span class="tag">11 Nov 2026</span>
         <h3>GTA 6 isn't out.<span>4 players already got paid.</span></h3>
         <div class="acts"><a href="https://www.instagram.com/reel/Dfl27LjpzYf/" target="_blank" rel="noopener">Watch on Instagram ↗</a></div>
       </article>
-      <article class="t reel hov" id="reel-ramayana">
+      <article class="t reel hov old" id="reel-ramayana">
         <video src="media/reel-ramayana.mp4" poster="media/reel-ramayana.webp" controls playsinline preload="none" width="540" height="960" aria-label="Reel: Ramayana opened exactly like Adipurush."></video>
         <span class="tag">9 Nov 2026</span>
         <h3>Ramayana opened<span>exactly like Adipurush.</span></h3>
         <div class="acts"><a href="https://www.instagram.com/reel/Dfg4rTtpxxN/" target="_blank" rel="noopener">Watch on Instagram ↗</a></div>
       </article>
-      <article class="t reel hov" id="reel-petrol">
+      <article class="t reel hov old" id="reel-petrol">
         <video src="media/reel-petrol.mp4" poster="media/reel-petrol.webp" controls playsinline preload="none" width="540" height="960" aria-label="Reel: Crude fell 16%. Our petrol fell ₹0."></video>
         <span class="tag">6 Nov 2026</span>
         <h3>Crude fell 16%.<span>Our petrol fell ₹0.</span></h3>
         <div class="acts"><a href="https://www.instagram.com/reel/DfY9yhqJPZb/" target="_blank" rel="noopener">Watch on Instagram ↗</a></div>
       </article>
-      <article class="t reel hov" id="reel-twoam">
+      <article class="t reel hov old" id="reel-twoam">
         <video src="media/reel-twoam.mp4" poster="media/reel-twoam.webp" controls playsinline preload="none" width="540" height="960" aria-label="Reel: Who'd pick up at 2am? Someone's paying for it."></video>
         <span class="tag">4 Nov 2026</span>
         <h3>Who'd pick up at 2am?<span>Someone's paying for it.</span></h3>
         <div class="acts"><a href="https://www.instagram.com/reel/DfSjqPLzyFG/" target="_blank" rel="noopener">Watch on Instagram ↗</a></div>
       </article>
     </div>
+
+    <div class="more"><button type="button" class="btn line" data-unfold="reels-grid">Show 4 older reels</button></div>
 
     <!-- METHOD -->
     <div class="sec">
@@ -536,20 +551,20 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
       <div class="t step s4 hov">
         <span class="stepn">01</span>
         <h3>The trend</h3>
-        <p>Seven days of India's Google searches, sorted by size and how long they last. Only trends that are big and still running make the cut.</p>
-        <span class="ex">This week: 2,500 trends read</span>
+        <p>A week of India's Google searches. Only trends that are big and still running.</p>
+        <span class="ex">This week: wedding season</span>
       </div>
       <div class="t dark step s4 hov">
         <span class="stepn" style="color:var(--accent)">02</span>
         <h3>The money</h3>
-        <p>The mechanic underneath: who sold, who bought, who pays when it goes wrong. Primary data first: AMFI, RBI, CFTC, filings.</p>
-        <span class="ex">This week: two Prime Focus investor decks</span>
+        <p>Who sold, who bought, who pays when it goes wrong. Primary data first.</p>
+        <span class="ex">This week: CAIT's season estimate</span>
       </div>
       <div class="t yel step s4">
         <span class="stepn">03</span>
         <h3>The receipt</h3>
-        <p>Every figure carries its source in the slide footer and the first comment. If a number can't be sourced, the slide changes.</p>
-        <span class="ex">This week: 6 sources, all linked</span>
+        <p>Every number carries its source. No source, no slide.</p>
+        <span class="ex">This week: 3 sources, all linked</span>
       </div>
     </div>
 
@@ -566,7 +581,7 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
         <ul class="facts">
           <li><span class="k">Based in</span><span class="v">Bengaluru</span></li>
           <li><span class="k">Lens</span><span class="v">Deals, insurance, markets</span></li>
-          <li><span class="k">Format</span><span class="v">LinkedIn carousels, weekly</span></li>
+          <li><span class="k">Format</span><span class="v">Carousels and reels, weekly</span></li>
           <li style="display:block"><span class="k">Path</span>
             <div class="path"><span>TCS</span><span>Kroll</span><span>WTW</span><span class="on">This</span></div></li>
         </ul>
@@ -708,6 +723,7 @@ dialog::backdrop{background:rgba(17,17,17,.7)}
   </div>
 </dialog>
 
+<div class="coin" aria-hidden="true"><svg viewBox="0 0 40 40" width="34" height="34"><circle cx="20" cy="20" r="18" fill="#FFD43B" stroke="#111" stroke-width="2.5"/><circle cx="20" cy="20" r="13.5" fill="none" stroke="#111" stroke-width="1.2" stroke-dasharray="1.6 2.4"/><text x="20" y="26.5" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="18" fill="#111">₹</text></svg></div>
 <script>
 function done(img){var p=img.closest('.sk');if(p)p.classList.remove('sk')}
 document.querySelectorAll('img').forEach(function(img){
@@ -734,6 +750,34 @@ document.querySelectorAll('dialog').forEach(function(d){
   d.addEventListener('click',function(e){if(e.target===d)d.close()});
 });
 document.querySelectorAll('video').forEach(function(v){v.addEventListener('play',function(){document.querySelectorAll('video').forEach(function(o){if(o!==v)o.pause()})})});
+/* v2 polish */
+(function(){
+  var d=document.documentElement, reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  d.classList.add('js');
+  var bar=document.querySelector('.bar');
+  function stick(){bar.classList.toggle('stuck',scrollY>8)} stick(); addEventListener('scroll',stick,{passive:true});
+  document.querySelectorAll('[data-unfold]').forEach(function(b){b.addEventListener('click',function(){
+    var g=document.getElementById(b.getAttribute('data-unfold')); g.classList.remove('fold');
+    g.querySelectorAll('.rv').forEach(function(e){e.classList.remove('rv','in')}); b.parentNode.remove();});});
+  if(!reduce&&'IntersectionObserver' in window){
+    var items=[];
+    document.querySelectorAll('.sec, .bento > *, .reelrow > *').forEach(function(e){
+      var sib=e.parentNode.children, i=Array.prototype.indexOf.call(sib,e);
+      e.style.setProperty('--d',(Math.min(i,5)*0.07)+'s'); e.classList.add('rv'); items.push(e);});
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){var e=en.target;e.classList.add('in');io.unobserve(e);
+      setTimeout(function(){e.classList.remove('rv','in');e.style.removeProperty('--d')},900);}})},{rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(e){io.observe(e)});
+  }
+  var coin=document.querySelector('.coin');
+  if(reduce||!matchMedia('(hover: hover) and (pointer: fine)').matches){coin.remove();return;}
+  var mx=-100,my=-100,x=-100,y=-100,rot=0,sc=1,ts=1,run=false;
+  addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;coin.classList.add('on');
+    ts=e.target.closest('a,button,.t.hov,video')?1.3:1; if(!run){run=true;requestAnimationFrame(tick)}},{passive:true});
+  document.addEventListener('pointerleave',function(){coin.classList.remove('on')});
+  function tick(){var dx=(mx-x)*0.2, dy=(my-y)*0.2; x+=dx; y+=dy; rot+=dx*3.4; sc+=(ts-sc)*0.2;
+    coin.style.transform='translate('+(x+12)+'px,'+(y+12)+'px) rotate('+rot+'deg) scale('+sc.toFixed(3)+')';
+    if(Math.abs(mx-x)+Math.abs(my-y)>0.3||Math.abs(ts-sc)>0.01)requestAnimationFrame(tick); else run=false;}
+})();
 </script>
 </body>
 </html>
